@@ -1,0 +1,51 @@
+html, body{
+    margin: 0;
+    font-family: extrude;
+    background-color: rgb(31, 35, 41);
+    overflow: hidden;
+    padding: 0;
+}
+@font-face {
+    font-family: handwriting;
+    src: url(Fonts/Handwriting-Regular.otf);
+    font-weight: 500;
+}
+@font-face{
+    font-family: 'extrude';
+    src: url(Fonts/Extrude-90aK.ttf);
+    font-style: normal;
+    font-weight: 100;
+}
+header{
+    text-align: center;
+    font-size: 50px;
+    color: rgb(41, 177, 188);
+}
+nav{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -240px;       
+    margin-top: -160px;  
+}
+ul{
+    color: rgb(235, 84, 104);
+    list-style-type: none;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: none;
+}
+.music{
+    margin-top: 200px;
+}
+a{
+    text-decoration: none;
+    color: rgb(235, 84, 104);
+}
+a:visited{
+    text-decoration: none;
+    color: rgb(235, 84, 104);
+}
+a:active{
+    color: rgb(235, 84, 104);
+}

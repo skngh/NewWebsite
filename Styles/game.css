@@ -1,0 +1,36 @@
+html {
+    background-color: rgb(35, 39, 46);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1 {
+    font-family: 'mexcellent';
+    color: white;
+    font-size: 65px;
+    text-align: center;
+}
+#video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+iframe {
+    border: 3px solid white;
+    box-shadow: 10px 5px 5px black;
+}
+@font-face{
+    font-family: 'mexcellent';
+    src: url(Fonts/mexcellent\ rg.otf);
+}
+#about-me {
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+    text-align: center;
+    font-size: 2vh;
+    /* color: rgb(199, 76, 94); */
+    color: rgb(171, 178, 191);
+    width: 90%;
+}

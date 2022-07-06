@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+    <title>Work - Sam Knight</title>
+    <link rel="stylesheet" href="Styles/work.css">
+    <link rel="icon" href="Images/a-master-favicon.ico">
+</head>
+<body>
+    <div>
+        <button id="mutebtn"></button>
+    </div>
+    <div>
+        <button id="playpausebtn"></button>
+    </div>
+    <header id="top-bar">
+        <nav class="top-nav">  
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="music.html">music</a></li>
+                <li><a href="videos.html">videos</a></li>
+                <li id="normal">work</li>
+                <li><a href="contact.html">contact</a></li>
+            </ul>
+            &nbsp;&nbsp; 
+                <h1 class="name">Sam Knight</h1>
+        </nav>
+    </header>
+    <div id="panel-container">
+        <div id="main-panel">
+            <p class="top"><a href="#top-page" class="scroll">top^</a></p>
+            <div class="top-container" id="top-page">
+                <nav>
+                    <ul>
+                        <li><a href="#games" class="scroll">Games</a></li>
+                        <li><a href="#sample-instruments" class="scroll">Sample Instruments</a></li>
+                        <li><a href="#web-dev" class="scroll">Web Development</a></li>
+                    </ul>
+                </nav>
+                <h1>About me</h1>
+                <div></div>
+            </div>
+            <p id="birthday"></p>
+            <div id="games" class="sample-web-header">
+                <h1>Games</h1>
+                <p>I got into game development during the start of quarantine. I pretty quickly realized how much I enjoyed it, and then signed up for a lot of game sound design classes in school. Since then, it's been my main pursuit as a career. Below links to my itch.io page, where I have two games I've made. One was a final for a class, where I made all the audio using Pure Data and packaged it with Unity (Star Mountain), and the other was for Brackey's Game Jam 2022.1 (Playtest). For my game jam submission, Playtest, I ranked tenth overall out of the 1,644 submissions. You can download and play both of the games below:</p>
+                <a href="https://skngh.itch.io/" target="_blank"><img src="Images/itchio-textless-black.svg" alt="itch.io" title="itch.io" class="itch"></a>
+            </div>
+            <div class="sample-web-header" id="sample-instruments">
+                <h1 class="sample-instrument-header">Sample Instruments</h1>
+                <p>I recently discovered a love for making sample instruments in Kontakt. As of right now, the main complete ones I've made are available for free on the amazing site Pianobook. Just click the icon below and it'll take you to my profile.</p>
+                <a href="https://www.pianobook.co.uk/profile/skngh/" target="_blank">
+                    <img src="Images/pianobook.svg" class="pianobook" alt="Pianobook" title="Pianobook">
+                </a>
+            </div>
+            <div id="web-dev" class="sample-web-header">
+                <h1>Web Development</h1>
+                <p>My start into programming was with web development. It's not somthing I'm still actively learning, but I followed the Odin Project for a bit and made some projects. Here's my GitHub with some of my work:</p>
+                <a href="https://github.com/skngh" target="_blank"><img src="Images/GitHub.png" alt="GitHub" title="GitHub" id="github"></a>
+            </div>
+            <p id="credits">website made by me</p>
+        </div> 
+    </div>
+    <script>
+        var audio, seek_bar, playbtn, mutebtn;
+        function initAudioPlayer(){
+            audio = new Audio();
+            audio.src = "audio/work.mp3";
+            type="audio/mp3";
+            audio.loop = true;
+            mutebtn = document.getElementById("mutebtn");
+            playbtn = document.getElementById("playpausebtn");
+
+            playbtn.addEventListener("click", playPause)
+            mutebtn.addEventListener("click", mute);
+            function playPause(){
+                if(audio.paused){
+                    audio.play();
+                    playbtn.style.background="url(Styles/Buttons/pause.png) no-repeat";
+                }
+                else{
+                    audio.pause();
+                    playbtn.style.background="url(Styles/Buttons/on.png) no-repeat";
+                }
+            }
+            function mute(){
+                if(audio.muted){
+                    audio.muted = false;
+                    mutebtn.style.background = "url(Styles/Buttons/play.png) no-repeat";
+                } else{
+                    audio.muted = true;
+                    mutebtn.style.background = "url(Styles/Buttons/mute.png) no-repeat";
+                }
+            }
+        }
+        window.addEventListener("load", initAudioPlayer);
+
+        const birthdayPar = document.querySelector("#birthday");
+
+        function calculate_age(dob) 
+        { 
+            var diff_ms = Date.now() - dob.getTime();
+            var age_dt = new Date(diff_ms); 
+  
+            return Math.abs(age_dt.getUTCFullYear() - 1970);
+        }
+
+        birthdayPar.innerHTML = `Hello! My name is Sam Knight I'm a ${calculate_age(new Date(2001, 11, 6))} year old musician/sound person currently attending school in Boston. I've been drumming for over ten years, and enjoy playing piano and guitar. I found a love of production in high school and realized I wanted to pursue it. That led me to Berklee College of Music and their electronic production and design program. While being here I have become more interested with sound design and programming. My goals are to get more into video game sound design and audio programming. Check out some of my work below. Thank u :D`;
+
+        const links = document.querySelectorAll(".scroll");
+ 
+        for (const link of links) {
+            link.addEventListener("click", clickHandler);
+        }
+
+        function clickHandler(e) {
+            e.preventDefault();
+            const href = this.getAttribute("href");
+
+        document.querySelector(href).scrollIntoView({
+            behavior: "smooth"
+        });
+        }
+    </script>
+</body>
+</html>
