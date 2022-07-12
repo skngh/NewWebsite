@@ -5,6 +5,23 @@ html {
     align-items: center;
     flex-direction: column;
 }
+.back{
+    position: sticky;
+    top: 0px;
+    font-size: 20px;
+    
+}
+.back a {
+    color: rgb(171, 178, 191);
+    text-decoration: none;
+}
+.back a :hover{
+    text-decoration: underline;
+}
+.back a:visited{
+    color: rgb(171, 178, 191);
+    text-decoration: none;
+}
 h1 {
     font-family: 'mexcellent';
     color: white;
@@ -25,6 +42,15 @@ iframe {
     font-family: 'mexcellent';
     src: url(Fonts/mexcellent\ rg.otf);
 }
+#show-more {
+    font-family: 'mexcellent';
+    text-align: center;
+    color: rgb(171, 178, 191);
+    text-decoration: underline;
+}
+#show-more:hover {
+    cursor: pointer;
+}
 #about-me {
     font-family: 'Courier New', Courier, monospace;
     margin: auto;
@@ -33,4 +59,49 @@ iframe {
     /* color: rgb(199, 76, 94); */
     color: rgb(171, 178, 191);
     width: 90%;
+}
+.title{
+    font-family: 'mexcellent';
+    color: white;
+    margin: auto;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 50px;
+}
+.icons{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    margin-bottom: 50px;
+}
+.itch {
+    width: 100px;
+}
+.instagram {
+    width: 100px;
+}
+.show {
+    opacity: 1;
+    transition: 1s;
+    pointer-events: all;
+}
+.hide {
+    opacity: 0;
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+    pointer-events: none;
+  }
+#showcased-videos ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
 }

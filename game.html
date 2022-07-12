@@ -6,16 +6,60 @@
         <link rel="stylesheet" href="Styles/game.css">
         <link rel="icon" href="Images/a-master-favicon.ico">
     </head>
+        <div class="back"><a href="index.html"><-- Back</a></div>
         <header>
             <h1>Sam Knight</h1>
         </header>
         <div id="video">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/4y9H9Yj-kzQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+        <h2 id="show-more">Show videos showcased in demo reel</h2>
+        <div id="showcased-videos" class="hide">
+            <ul>
+                <li><iframe width="290" height="163" src="https://www.youtube.com/embed/buIEaIJmqpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+
+                <li><iframe width="290" height="163" src="https://www.youtube.com/embed/u7yTZFod7_k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+
+                <li><iframe width="290" height="163" src="https://www.youtube.com/embed/dWpxqdCnG5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+
+                <li><iframe width="290" height="163" src="https://www.youtube.com/embed/X6om1DbKWGQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+
+                <li><iframe width="290" height="163" src="https://www.youtube.com/embed/hwPDgJiMwA8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+            </ul>
+        </div>
         <div id="about-me">
             <p>
-                Hello! My name is Sam Knight, I’m a 21 year old game developer and sound designer from Maine. I’m currently studying Electronic Production & Design, with a minor in Creative Coding at Berklee College of Music. Most of my focus at Berklee has been on game development and audio programming, where my main interests lie. I love creating things for others to use and enjoy, such as video games or software instruments. I have participated in multiple game jams, both in a team as the sound designer/implementer, or as a solo developer. In my free time, I’m either making music of my own or building devices that help me get weirder sounds. You can check out my demo reel on the left if you’re interested in seeing more.
+                Hello! My name is Sam Knight, I’m a 21 year old game developer and sound designer from Maine. I’m currently studying Electronic Production & Design, with a minor in Creative Coding at Berklee College of Music. Most of my focus at Berklee has been on game development and audio programming, where my main interests lie. I love creating things for others to use and enjoy, such as video games or software instruments. I have participated in multiple game jams, both in a team as the sound designer/implementer, or as a solo developer. In my free time, I’m either making music of my own or building devices that help me get weirder sounds. You can check out my demo reel above if you’re interested in seeing more.
             </p>
         </div>
+        <h2 class="title">Instagram & Itch.io</h2>
+        <footer>
+            <div class="icons">
+                <a href="https://www.instagram.com/imsamknight/" target="_blank"><img src="Icons/instagram_black.png" alt="Instagram" title="Instagram" class="instagram"></a>
+                
+                <a href="https://skngh.itch.io/" target="_blank"><img src="Icons/Itchio.webp" alt="itch.io" title="itch.io" class="itch"></a>
+            </div>
+        </footer>
+        <script>
+            const showMore = document.querySelector("#show-more");
+            const showcasedVideos = document.querySelector("#showcased-videos");
+            let isOpen = false;
+
+            showMore.addEventListener("click", () => {
+                if(!isOpen) {
+                    showcasedVideos.classList.remove("hide");
+                    showcasedVideos.classList.add("show");
+                    showMore.textContent = "Hide videos showcased in demo reel";
+                    isOpen = true;
+                }
+                else {
+                    showcasedVideos.classList.remove("show");
+                    showcasedVideos.classList.add("hide");
+                    showMore.textContent = "Show videos showcased in demo reel";
+                    isOpen = false;
+                }
+            });
+
+        </script>
     </body>
 </html>
