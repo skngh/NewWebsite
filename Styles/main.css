@@ -21,12 +21,9 @@ header{
     font-size: 50px;
     color: rgb(41, 177, 188);
 }
-nav{
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    margin-left: -240px;       
-    margin-top: -160px;  
+nav {
+    margin-top: 150px;
+    margin-left: -35px;
 }
 ul{
     color: rgb(235, 84, 104);
